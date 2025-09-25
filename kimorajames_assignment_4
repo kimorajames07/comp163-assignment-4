@@ -3,5 +3,28 @@ current_gpa = 3.2
 study_hours = 10 
 social_points = 20
 stress_levels = 85
+#test case number 2 
+
 print(f"Welcome {student_name}!")
 print(f"GPA: {current_gpa}, Study Hours: {study_hours}, Social Points: {social_points}, Stress Level: {stress_levels}")
+print("Choose your course load:")
+print("A) Light (12 credits)")
+print("B) Standard (15 credits)")
+print("C) Heavy (18 credits)")
+
+choice = input("Your choice: ")
+
+if choice == "A":
+    stress_level -= 10
+    study_hours -= 5
+elif choice == "B":
+    stress_level += 5
+elif choice == "C":
+    if current_gpa >= 3.5:
+        stress_level += 15
+        study_hours += 10
+    else:
+        stress_level += 25
+        study_hours += 15
+else:
+    print("Invalid choice!")
