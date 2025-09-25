@@ -28,3 +28,27 @@ elif choice == "C":
         study_hours += 15
 else:
     print("Invalid choice!")
+#test case number 3
+study_options = ["Programming", "Math", "English", "History"]
+
+print("Choose a subject to focus on:")
+print("Options:", ", ".join(study_options)) #AI helped me with this part
+
+subject = input("Your choice: ").title()
+
+if subject not in study_options:
+    print("That’s not a valid subject! You wasted study time.")
+    study_hours -= 5
+    stress_level += 10
+else:
+    if subject == "Programming" and study_hours > 20:
+        current_gpa += 0.2
+        print("Your coding skills improved! GPA increased.")
+    elif subject == "Math" or subject == "History":
+        current_gpa += 0.1
+        social_points -= 5
+        print("Studying hard! GPA increased, but less social time.")
+    elif subject == "English" and not stress_level > 80:
+        current_gpa += 0.15
+        print("Relaxed reading helped you focus. GPA increased.")
+
