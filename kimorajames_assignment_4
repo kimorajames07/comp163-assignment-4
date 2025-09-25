@@ -1,3 +1,4 @@
+# test case 1
 student_name = "Kimora James" 
 current_gpa = 3.2
 study_hours = 10 
@@ -51,4 +52,23 @@ else:
     elif subject == "English" and not stress_level > 80:
         current_gpa += 0.15
         print("Relaxed reading helped you focus. GPA increased.")
+#test case #4
+
+if type(current_gpa) is not float:
+    print("Error: GPA data type is invalid")
+else:
+    # GPA is valid (float), proceed with nested checks
+    if current_gpa >= 3.5:
+        if stress_level < 60:
+            print("You made the Dean’s List! 🎉")
+        else:
+            print("You made the Dean’s List, but your stress is high. Take care!")
+    elif current_gpa >= 2.0:
+        if social_points >= 30:
+            print("You passed the semester. Well done balancing school and social life!")
+        else:
+            print("You passed, but try to improve your social life next semester.")
+    else:
+        print("You need to reflect and try again next semester.")
+
 
